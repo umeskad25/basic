@@ -1,0 +1,40 @@
+
+<p>login works!</p>
+<p> user :  {{name}} log in our portal</p>
+<h3> this is incline css </h3>
+
+
+<p>-------------- *ngFor --------------------------</p>
+<div *ngFor= "let value of users">
+  {{value}}
+</div>
+
+
+<div *ngFor= "let value of users; index as i">
+  {{i }}{{value}}
+</div>
+
+<div *ngFor = "let a of users;index as i">
+{{a+i}}
+</div>
+
+<p>------------------ *ngSwitch  -------------</p>
+
+<div [ngSwitch]="user">
+    <div *ngSwitchCase="'Sagar'"> i am {{user}} , admin user  </div>
+    <div *ngSwitchCase="'Rushikesh'"> i am {{user}} , admin user   </div>
+    <div *ngSwitchCase="'Priyanks'"> i am {{user}} , admin user   </div>
+    <div *ngSwitchCase="'Pratik'"> i am {{user}} , admin user   </div>
+    <div *ngSwitchDefault> no any admin user  </div>
+</div>
+
+<p>------------------ *ifElse  -------------</p>
+<div *ngIf="flag ;else noname">
+
+    <h6>i am in true statment</h6>
+   
+</div>
+<ng-template  #noname>
+    <h6>i am in false statment</h6>
+
+</ng-template >
